@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/demo/file/standardServletMultipartResolver" method="post" enctype="multipart/form-data" target="frameName">
+    <!-- multiple属性表示可上次多个文件 -->
+    <input type="file" name="files" value="选择文件" multiple>
+    <input type="submit" value="上传">
+</form>
+<!-- 提交成功后停留在原页面 -->
+<iframe src="" frameborder="0" name="frameName"></iframe>
+</body>
+</html>

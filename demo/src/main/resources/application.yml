@@ -1,0 +1,45 @@
+spring:
+  profiles:
+    include: common
+server:
+  servlet:
+    #表示项目名称，不配置时默认为/，如果配置了，需在访问路径中添加配置的路径
+    context-path: /demo
+    session:
+      #session失效时间，默认为此处配置30分钟
+      timeout: 30m
+  #配置Web容器端口号
+  port: 8088
+  error:
+    #项目出错时跳转路径
+    path: /error
+  tomcat:
+    #tomcat最大线程数，默认200
+    max-threads: 300
+    #存放tomcat运行日志和临时文件的目录，若不配置，则默认使用系统的临时目录
+    #basedir:
+    #tomcat请求编码
+    uri-encoding: utf-8
+
+student:
+  name: 测试
+  birth_date: 2019-12-25
+  cource:
+  - 语文
+  - 数学
+  - 英语
+
+many:
+  students:
+  - name: 张三
+    birth_date: 2018-12-25
+    cource:
+    - 语文
+    - 数学
+    - 英语
+  - name: 李四
+    birth_date: 2000-12-25
+    cource:
+    - 语文
+    - 数学
+    - 音乐
