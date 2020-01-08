@@ -30,13 +30,13 @@ public class LogHandlerInterceptor implements HandlerInterceptor {
 
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) {
-        log.info("=========>in LogHandlerInterceptor postHandle {} {}");
+        log.info("=========>in LogHandlerInterceptor postHandle");
         logService.onAfter();
     }
 
     @Override
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex){
-        log.info("=========>in LogHandlerInterceptor afterCompletion {} {}");
+        log.info("=========>in LogHandlerInterceptor afterCompletion");
         logService.onError();
     }
 }
