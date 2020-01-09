@@ -27,6 +27,6 @@ public class CustomWebMvcConfigurer implements WebMvcConfigurer {
      */
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(logHandlerInterceptor).excludePathPatterns().order(2);
+        registry.addInterceptor(logHandlerInterceptor).addPathPatterns("/global/**").order(2);
     }
 }

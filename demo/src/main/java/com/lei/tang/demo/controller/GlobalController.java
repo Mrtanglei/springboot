@@ -22,7 +22,6 @@ public class GlobalController {
     public String exception(@RequestParam(required = false) String s) throws InterruptedException {
         Assert.hasText(s, "校验失败");
         Thread.sleep(4000);
-        log.info("进入controller");
         return "通过校验";
     }
 

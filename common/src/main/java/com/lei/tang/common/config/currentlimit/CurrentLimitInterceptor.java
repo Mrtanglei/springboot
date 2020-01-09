@@ -29,13 +29,13 @@ public class CurrentLimitInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        log.info("进入限流拦截器");
         if (handler instanceof HandlerMethod) {
             HandlerMethod handlerMethod = (HandlerMethod) handler;
             //通过HandlerMethod获取方法CurrentLimit注解
             CurrentLimit currentLimit = handlerMethod.getMethodAnnotation(CurrentLimit.class);
             //如果此方法存在限流注解
             if (currentLimit != null) {
+                log.info("进入限流拦截器");
                 int number = currentLimit.number();
                 long time = currentLimit.time();
                 //如果次数和时间限制都大于0证明此处需要限流
