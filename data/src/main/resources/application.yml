@@ -1,0 +1,14 @@
+server:
+  servlet:
+    context-path: /data/
+  port: 8089
+spring:
+  datasource:
+    #数据库连接池
+    type: com.alibaba.druid.pool.DruidDataSource
+    #连接的url，SpringBoot指的是数据名
+    url: jdbc:mysql://127.0.0.1:3306/SpringBoot
+    #用户名
+    username: root
+    #密码
+    password: rootroot
