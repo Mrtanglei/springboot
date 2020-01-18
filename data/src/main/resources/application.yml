@@ -12,3 +12,6 @@ spring:
     username: root
     #密码
     password: rootroot
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+#  type-aliases-package: com.springboot.data.mapper

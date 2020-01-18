@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.springboot.data.mapper.StudentMapper">
+    <insert id="add" parameterType="com.springboot.data.dto.Student">
+        insert into springboot_student (name, sex, age) values (#{name},#{sex},#{age})
+    </insert>
+
+    <update id="update" parameterType="com.springboot.data.dto.Student">
+        update springboot_student set name = #{name},sex = #{sex},age = #{age} where id = #{id}
+    </update>
+
+    <delete id="delete" parameterType="java.lang.Long">
+        delete from springboot_student where id = #{id}
+    </delete>
+
+    <select id="find" parameterType="java.lang.Long" resultType="com.springboot.data.dto.Student">
+        select * from springboot_student where id = #{id}
+    </select>
+
+    <resultMap id="studentBean" type="com.springboot.data.dto.StudentBean">
+        <result property="id" column="id"/>
+        <result property="name" column="name"/>
+    </resultMap>
+    <select id="findAll" resultMap="studentBean">
+        select * from springboot_student
+    </select>
+</mapper>

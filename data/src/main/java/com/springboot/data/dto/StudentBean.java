@@ -11,13 +11,9 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class Student {
+public class StudentBean {
 
     private Long id;
 
     private String name;
-
-    private String sex;
-
-    private Integer age;
 }
