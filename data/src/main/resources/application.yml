@@ -12,6 +12,19 @@ spring:
     username: root
     #密码
     password: rootroot
+  jpa:
+    #指定数据库类型
+    database: mysql
+    #是否打印sql
+    show-sql: false
+    #配置是否自动创建数据库表
+    generate-ddl: true
+    hibernate:
+      #实体中字段更改更新数据表的级别
+      ddl-auto: update
+      naming:
+        #自定义entity注解中的命名规范
+        physical-strategy: com.springboot.data.config.CustomPhysicalNamingStrategy
 mybatis:
   mapper-locations: classpath:mapping/*.xml
 #  type-aliases-package: com.springboot.data.mapper
