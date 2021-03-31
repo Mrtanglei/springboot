@@ -14,7 +14,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <google.guava>28.1-jre</google.guava>
+        <google.guava>29.0-jre</google.guava>
     </properties>
 
     <dependencies>
